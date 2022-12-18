@@ -61,11 +61,11 @@ public class OpenbankController {
 		log.info("🐧🐧🐧🐧🐧🐧🐧🐧🐧🐧🐧🐧🐧  오픈뱅킹 - 계좌");
 		log.info("/openbank/oauthOK 로 이동");
 
-		/*
-		 * String loginID = (String)session.getAttribute("loginID"); if(loginID == null)
-		 * { rttr.addFlashAttribute("msg", "로그인 후 이용 가능합니다"); return
-		 * "redirect:/main/login"; }
-		 */
+		
+		 String loginID = (String)session.getAttribute("loginID"); if(loginID == null)
+		 { rttr.addFlashAttribute("msg", "로그인 후 이용 가능합니다"); return
+		 "redirect:/main/login"; }
+		 
 		
 		return "/openbank/oauthOK";
 	}
